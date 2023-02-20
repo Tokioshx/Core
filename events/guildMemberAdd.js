@@ -8,7 +8,7 @@ client.on(Events.GuildMemberAdd, async (member) => {
         embeds: [
           new EmbedBuilder()
           .setAuthor({ name: `${member.user.tag} Just join the server!`, iconURL: member.user.displayAvatarURL({ forceStatic: true, extension: 'png' }) })
-          .setColor('Navy')
+          .setColor('#0b4f6c')
           .setThumbnail(member.user.displayAvatarURL({ forceStatic: true, extension: 'png' }))
           .setDescription('We are glad to have you as a new member of our server. We hope you will enjoy your stay and feel free to explore and engage with our community.')
           .setImage('https://i.pinimg.com/564x/33/6d/d3/336dd33d5cfc180baf99d702bdd0592f.jpg')
