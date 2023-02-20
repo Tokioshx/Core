@@ -4,13 +4,13 @@
   "description": "Official bot Discord of Cloynn Community",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hitorina/Core.git"
   },
-  "author": "",
+  "author": "Tokioshy",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hitorina/Core/issues"
