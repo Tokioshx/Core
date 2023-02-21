@@ -14,11 +14,14 @@ client.on(Events.GuildRoleCreate, async (role) => {
 
   let embed = new EmbedBuilder()
   .setAuthor({ name: 'New Role Created', iconURL: executor.displayAvatarURL({ extension: 'png', foceStatic: true }) })
-  .setColor('Random')
+  .setColor('Navy')
   .addFields(
     { name: 'Role', value: `${role}`, inline: true },
-    { name: 'Creator', value: `${executor}` }
-  );
+    { name: 'Creator', value: `${executor}`, inline: true },
+    { name: 'Color', value: `${role.hexColor}`, inline: true }
+  )
+  .setFooter({ text: `${executor.tag}` })
+  .setTimestamp();
 
   client.channels.cache.get('1077233903758229555').send({ embeds: [embed] });
 });
