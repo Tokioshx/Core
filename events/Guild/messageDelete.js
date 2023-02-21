@@ -1,4 +1,4 @@
-const client = require('../index');
+const client = require('../../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.MessageDelete, async (message) => {

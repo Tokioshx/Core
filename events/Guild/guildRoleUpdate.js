@@ -1,4 +1,4 @@
-const client = require('../index');
+const client = require('../../index');
 const { Events, EmbedBuilder, AuditLogEvent } = require('discord.js');
 
 client.on(Events.GuildRoleUpdate, async (oldRole, newRole) => {

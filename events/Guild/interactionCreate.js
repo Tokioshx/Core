@@ -1,4 +1,4 @@
-const client = require('../index');
+const client = require('../../index');
 const { Events, EmbedBuilder, ModalBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle, PermissionsBitField } = require('discord.js');
 
 client.on(Events.InteractionCreate, async (interaction) => {

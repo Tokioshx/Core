@@ -1,4 +1,4 @@
-const client = require('../index');
+const client = require('../../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.MessageUpdate, async (oldMessage, newMessage) => {
