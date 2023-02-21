@@ -24,7 +24,25 @@ client.on(Events.GuildRoleUpdate, async (oldRole, newRole) => {
 
   if(oldRole.hexColor !== newRole.hexColor) {
     embed.addFields(
-      { name: 'New Color', value: `${newRole.hexColor}`, inline: true }
+      { name: 'New Color', value: `Before: ${oldRole.hexColor}\nAfter: ${newRole.hexColor}`, inline: true }
+    );
+  };
+
+  if(oldRole.hoist !== newRole.hoist) {
+    embed.addFields(
+      { name: 'Display Role', value: `Before: ${oldRole.hoist ? 'Visible' : 'Invisible'}\nAfter: ${newRole.hoist ? 'Visible' : 'Invisible'}`, inline: true }
+    );
+  };
+
+  if(oldRole.name !== newRole.name) {
+    embed.addFields(
+      { name: 'New Name', value: `Before: ${oldRole.name}\nAfter: ${newRole.name}`, inline: true }
+    );
+  };
+
+  if(oldRole.mentionable !== newRole.mentionable) {
+    embed.addFields(
+      { name: 'Mentionable', value: `Before: ${oldRole.mentionable ? 'Yes' : 'No'}\nAfter: ${newRole.mentionable ? 'Yes' : 'No'}`, inline: true }
     );
   };
 
