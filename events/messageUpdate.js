@@ -2,7 +2,7 @@ const client = require('../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.MessageUpdate, async (oldMessage, newMessage) => {
-  if(oldMessage.author.bot || oldMessage.guild.id !== client.config.serverId || !oldMessage.guild || oldMessage === newMessage || newMessage.length < 1) return;
+  if(oldMessage.author.bot || oldMessage.guild.id !== client.config.serverId || !oldMessage.guild) return;
 
   let embed = new EmbedBuilder()
   .setAuthor({ name: `New Message Edited`, iconURL: oldMessage.author.displayAvatarURL({ forceStatic: true, extension: 'png' }) })
