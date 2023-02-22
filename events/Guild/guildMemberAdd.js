@@ -2,7 +2,7 @@ const client = require('../../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.GuildMemberAdd, async (member) => {
-  if(member.guild.id == client.config.guildId) {
+  if(member.guild.id == process.env.serverId) {
     if(!member.user.bot) {
       client.channels.cache.get('1066220938724642827').send({
         embeds: [

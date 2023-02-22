@@ -4,7 +4,7 @@ const { QuickDB } = require('quick.db');
 const db = new QuickDB();
 
 client.on(Events.ClientReady, async () => {
-  client.user.setActivity(`${client.config.prefix}help | Let's play!`, { type: ActivityType.Playing });
+  client.user.setActivity(`${process.env.prefix}help | Let's play!`, { type: ActivityType.Playing });
   console.log(`${client.user.tag} is up and ready to go!`);
 
   let ch = await db.get('restart');

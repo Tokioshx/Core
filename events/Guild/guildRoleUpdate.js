@@ -2,7 +2,7 @@ const client = require('../../index');
 const { Events, EmbedBuilder, AuditLogEvent } = require('discord.js');
 
 client.on(Events.GuildRoleUpdate, async (oldRole, newRole) => {
-  if(oldRole.guild.id !== client.config.serverId) return;
+  if(oldRole.guild.id !== process.env.serverId) return;
 
   let fetchedLogs = await oldRole.guild.fetchAuditLogs({
     limit: 1,

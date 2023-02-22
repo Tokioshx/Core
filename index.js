@@ -20,9 +20,9 @@ const client = new Client({
 });
 
 client.commands = new Collection();
-client.config = require('./handler/config.js');
 
+require('dotenv').config();
 require('./handler')(client);
 
-client.login(client.config.token);
+client.login(process.env.token);
 module.exports = client;

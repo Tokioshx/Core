@@ -1,10 +1,11 @@
 const { EmbedBuilder } = require('discord.js');
+let dev = process.env.developer ? process.env.developer.split(',') : [];
 
 module.exports = {
   name: 'evaluation',
   aliases: ['eval'],
   run: async (client, message) => {
-    if(!client.config.developer.includes(message.author.id)) {
+    if(!dev.includes(message.author.id)) {
       return message.channel.send({
         embeds: [
           new EmbedBuilder()

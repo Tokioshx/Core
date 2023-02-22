@@ -2,7 +2,7 @@ const client = require('../../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.MessageCreate, async (message) => {
-  let prefix = client.config.prefix;
+  let prefix = process.env.prefix;
   if(message.author.bot || !message.guild || !message.content.toLowerCase().startsWith(prefix)) return;
 
   const [cmd, ...args] = message.content.slice(prefix.length).trim().split(/ +/g);

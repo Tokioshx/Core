@@ -2,7 +2,7 @@ const client = require('../../index');
 const { Events, EmbedBuilder } = require('discord.js');
 
 client.on(Events.MessageDelete, async (message) => {
-  if(message.author.bot || message.guild.id !== client.config.serverId || !message.guild) return;
+  if(message.author.bot || message.guild.id !== process.env.serverId || !message.guild) return;
 
   let embed = new EmbedBuilder()
   .setAuthor({ name: 'New Message Deleted', iconURL: message.author.displayAvatarURL({ forceStatic: true, extension: 'png' }) })
