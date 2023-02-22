@@ -34,12 +34,12 @@ module.exports = {
           .setDescription('Please provide a number not a character or symbols.')
         ]
       });
-    } else if(clear < 1 || clear > 100) {
+    } else if(clear < 1 || clear > 99) {
       return message.channel.send({
         embeds: [
           new EmbedBuilder()
           .setColor('Red')
-          .setDescription('The minimum value is 1 and maximum is 100.')
+          .setDescription('The minimum value is 1 and maximum is 99.')
         ]
       });
     };
