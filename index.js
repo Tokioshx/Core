@@ -25,4 +25,4 @@ require('dotenv').config();
 require('./handler')(client);
 
 client.login(process.env.token);
-module.exports = client;
+module.exports = client; // test
