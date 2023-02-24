@@ -9,14 +9,7 @@ const client = new Client({
   makeCache: Options.cacheWithLimits({
     ...Options.DefaultMakeCacheSettings,
     ReactionManager: 0
-  }),
-  sweepers: {
-    ...Options.DefaultSweeperSettings,
-    messages: {
-      interval: 3600,
-      lifetime: 1800,
-    },
-  },
+  })
 });
 
 client.commands = new Collection();
