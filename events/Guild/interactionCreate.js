@@ -51,6 +51,29 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
       interaction.showModal(modal);
     };
+
+    if(interaction.customId === 'verifikasi') {
+      if(interaction.member.roles.cache.has('1066231256502775859')) {
+        return interaction.reply({
+          embeds: [
+            new EmbedBuilder()
+            .setColor('Red')
+            .setDescription('Kamu sudah verifikasi!')
+          ],
+          ephemeral: true
+        });
+      } else {
+        interaction.member.roles.add('1066231256502775859');
+        interaction.reply({
+          embeds: [
+            new EmbedBuilder()
+            .setColor('Green')
+            .setDescription('Kamu berhasil verifikasi!')
+          ],
+          ephemeral: true
+        });
+      };
+    };
   };
 
   if(interaction.isModalSubmit()) {
